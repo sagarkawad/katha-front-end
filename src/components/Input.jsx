@@ -17,7 +17,7 @@ export default function Input({ onClickHandler }) {
       <textarea
         rows="4"
         cols="50"
-        placeholder="Just pour your heart out 💖..."
+        placeholder="Just pour your heart out..."
         value={userIp}
         onChange={onChangeHandler}
       ></textarea>
