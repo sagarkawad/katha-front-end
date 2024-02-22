@@ -7,7 +7,7 @@ function App() {
   const [data, setData] = useState([]);
 
   async function fetchData() {
-    fetch("http://172.105.34.14:3001/api/data")
+    fetch("https://katha-1.onrender.com/api/data")
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error("Error fetching data:", error));
@@ -48,7 +48,7 @@ function App() {
 
     if (ip.trim() != "") {
       try {
-        const response = await fetch("http://172.105.34.14:3001/api/data", {
+        const response = await fetch("https://katha-1.onrender.com/api/data", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
