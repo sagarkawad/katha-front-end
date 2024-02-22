@@ -1,0 +1,19 @@
+.story-section {
+  margin-bottom: 20px;
+  border: 1px solid gray;
+  padding: 4px 16px;
+  border-radius: 6px;
+  width: 50vw;
+  position: relative;
+  text-align: left;
+}
+
+h3 {
+  font-weight: 300;
+}
+
+footer {
+  display: flex;
+  justify-content: right;
+  color: rgba(128, 128, 128, 0.833);
+}
