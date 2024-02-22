@@ -7,7 +7,7 @@ function App() {
   const [data, setData] = useState([]);
 
   async function fetchData() {
-    fetch("https://katha-7ha1.onrender.com/api/data")
+    fetch("http://172.105.34.14:3001/api/data")
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error("Error fetching data:", error));
@@ -48,16 +48,13 @@ function App() {
 
     if (ip.trim() != "") {
       try {
-        const response = await fetch(
-          "https://katha-7ha1.onrender.com/api/data",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ ip }),
-          }
-        );
+        const response = await fetch("http://172.105.34.14:3001/api/data", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ ip }),
+        });
         if (!response.ok) {
           throw new Error("Failed to post content");
         }
